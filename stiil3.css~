@@ -1,0 +1,268 @@
+﻿/*background image kood pärit - http://css-tricks.com/perfect-full-page-background-image/ */
+#main_body{ 
+  background: url(taustad/taust3.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#ember_body{
+  background: url(taustad/ember_spirit_taust.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#magnus_body{
+background: url(taustad/magnus_taust.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#mirana_body{
+ background: url(taustad/mirana_taust.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#puck_body{
+  background: url(taustad/puck_taust.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#qop_body{
+ background: url(taustad/qop_taust1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#rubick_body{
+ background: url(taustad/rubick_taust.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#slark_body{
+ background: url(taustad/slark_taust.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#storm_body{
+ background: url(taustad/storm_spirit_taust.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#TA_body{
+ background: url(taustad/ta_taust.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#tidehunter_body{
+  background: url(taustad/tidehunter_taust.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+menu{
+	min-height:100px;
+	min-width:100px;
+}
+body{
+font-family: 'Hammersmith One', sans-serif;
+color:#00BFFF;
+text-align:center;
+}
+h1{
+font-family:"Tahoma", Geneva, sans-serif;
+color:#FF4500;
+font-size:450%;
+display: block;
+text-align: center;
+}
+#log{
+float: right;
+color:#FFCC00;
+font-weight:700;
+}
+#wrap{
+max-width:900px;
+min-height:600px;
+margin-left:auto;
+margin-right:auto;
+}
+ul
+{
+position:relative;
+text-align:center;
+list-style-type:none;
+padding:0px;
+margin:0px;
+border:3px #E6B800 ridge;
+padding:20px;
+font-size: 150%;
+text-align:center;
+display:block;
+background:#444444;
+font-weight:800;
+}
+#content{
+clear:both;
+background:#444444;
+padding:20px;
+padding-left:85px;
+text-align:justify;
+text-justify:inter-word;
+border:5px #E6B800 ridge;
+}
+#content img{
+border: 4px black solid;
+margin-left:auto;
+margin-right:auto;
+}
+a:link {
+color:black;
+text-decoration:none;
+}    
+a:visited {
+color:black;
+text-decoration:none;
+}  
+a:hover {
+color:#00BFFF;
+text-decoration:none;
+}
+#registreeru:link{
+color:#FFCC00;
+text-decoration:none;
+}
+#registreeru:visited{
+color:#FFCC00;
+text-decoration:none;
+}
+#registreeru:hover {
+color:#00BFFF;
+text-decoration:none;
+}
+.pilt{
+display:block ;
+margin-left:auto ;
+margin-right:auto ;
+}
+.role{
+text-align:center;
+color:black;
+}
+.bio{
+border:5px black ridge;
+padding:20px;
+}
+.ptabel{
+border:5px black inset;
+padding:5px;
+}
+
+#frame {
+	display:none;
+	position:absolute; 
+	box-shadow: 4px 4px 8px 4px #888;
+	-webkit-box-shadow: 4px 4px 8px 4px #888;
+	box-shadow: 4px 4px 8px 4px #888;
+}
+#title { 
+	background:black; 
+	overflow-x:hidden;
+}
+#filler {
+	vertical-align:bottom;
+	border:solid black 10px;
+}
+
+
+
+
+
+/* alljärgnev pärineb http://codepen.io/xeroz/pen/pbFIJ */
+#wrap2{
+	width: 100%;
+	height: 200%;
+	max-width: 1100px;
+	min-height: 1000px;
+	margin: 50px auto;
+}
+.columns_2 figure{
+   width:49%;
+   margin-right:1%;
+}
+.columns_2 figure:nth-child(2){
+	margin-right: 0;
+}
+.columns_3 figure{
+   width:32%;
+   margin-right:1%;
+}
+.columns_3 figure:nth-child(3){
+	margin-right: 0;
+}
+.columns_4 figure{
+   width:24%;
+   margin-right:1%;
+}
+.columns_4 figure:nth-child(4){
+	margin-right: 0;
+}
+.columns_5 figure{
+   width:19%;
+   margin-right:1%;
+}
+.columns_5 figure:nth-child(5){
+	margin-right: 0;
+}
+#columns figure:hover{
+	-webkit-transform: scale(1.1);
+	-transform:scale(1.1);
+	transform: scale(1.1);
+
+}
+div#columns figure {
+	box-sizing:border-box;
+	box-sizing:border-box;
+
+	display: inline-block;
+	background: #BFCCBF;
+	border: 2px solid black;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 0px 15px;
+	padding: 15px;
+	padding-bottom: 5px;
+	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+	opacity: 1;
+
+}
+
+div#columns figure img {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+
+div#columns figure figcaption {
+  font-size: .9rem;
+  color: #444;
+  line-height: 1.5;
+  height:60px;
+  font-weight:600;
+  text-overflow:ellipsis;
+}
+a.button{
+  padding:10px;
+  background:#FFCC00;
+  margin:10px;
+  display:block;
+  text-align:center;
+}
+a.button:hover{
+  background:#FF4500;
+  color:#FFCC00;
+}
+

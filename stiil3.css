@@ -1,0 +1,243 @@
+﻿/*background image kood pärit - http://css-tricks.com/perfect-full-page-background-image/ */
+#main_body{ 
+  background: url(taustad/taust3.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#satch_body{
+  background: url(taustad/satch1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#nick_body{
+  background: url(taustad/nick1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#mikael_body{
+  background: url(taustad/opeth1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#steven_body{
+  background: url(taustad/steven1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#ian_body{
+  background: url(taustad/ian1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+menu{
+	min-height:125px;
+	min-width:600px;
+}
+body{
+	font-family: 'Hammersmith One', sans-serif;
+	color:#00BFFF;
+	text-align:center;
+}
+h1{
+	font-family:"Tahoma", Geneva, sans-serif;
+	color:#0077b3;
+	font-size:450%;
+	display: block;
+	text-align: center;
+}
+h2{
+	font-family:"Tahoma", Geneva, sans-serif;
+	color:#0077b3;
+	font-size:200%;
+	text-align:left;
+	color:#0077b3;
+}
+#log{
+	float: right;
+	color:#FFCC00;
+	font-weight:700;
+}
+#wrap{
+	max-width:900px;
+	min-height:600px;
+	margin-left:auto;
+	margin-right:auto;
+}
+ul
+{
+	position:relative;
+	text-align:center;
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+	border:3px #E6B800 ridge;
+	padding:20px;
+	font-size: 150%;
+	text-align:center;
+	display:block;
+	background:#444444;
+	font-weight:800;
+}
+#content{
+	clear:both;
+	background:#444444;
+	padding:20px;
+	padding-left:85px;
+	text-align:justify;
+	text-justify:inter-word;
+	border:5px #E6B800 ridge;
+}
+#content img{
+	border: 4px black solid;
+	margin-left:auto;
+	margin-right:auto;
+}
+a:link {
+	color:#FFCC00;
+	text-decoration:none;
+}    
+a:visited {
+	color:#d9d9d9;
+	text-decoration:none;
+}  
+a:hover {
+	color:#d9d9d9;
+	text-decoration:none;
+}
+#registreeru:link{
+	color:#FFCC00;
+	text-decoration:none;
+}
+#registreeru:visited{
+	color:#FFCC00;
+	text-decoration:none;
+}
+#registreeru:hover {
+	color:#d9d9d9;
+	text-decoration:none;
+}
+.pilt{
+	display:block ;
+	margin-left:auto ;
+	margin-right:auto ;
+}
+.role{
+	text-align:center;
+	color:#d9d9d9;
+}
+.bio{
+	border:5px black ridge;
+	padding:20px;
+}
+.comment{
+	border:5px black ridge;
+	padding:20px;
+	color:#FFCC00;
+}
+.ptabel{
+	border:5px black inset;
+	padding:5px;
+}
+#frame {
+	display:none;
+	position:absolute; 
+	box-shadow: 4px 4px 8px 4px #888;
+	-webkit-box-shadow: 4px 4px 8px 4px #888;
+	box-shadow: 4px 4px 8px 4px #888;
+}
+#title { 
+	background:black; 
+	overflow-x:hidden;
+}
+#filler {
+	vertical-align:bottom;
+	border:solid black 10px;
+}
+#wrap2{
+	width: 100%;
+	max-width: 1100px;
+	margin: 50px auto;
+}
+#boxy{
+	width:520px;
+	height:370px;
+	border:5px black ridge;
+	background-color:#333333;
+}
+.columns_2 figure{
+   width:49%;
+   margin-right:1%;
+}
+.columns_2 figure:nth-child(2){
+	margin-right: 0;
+}
+.columns_3 figure{
+   width:32%;
+   margin-right:1%;
+}
+.columns_3 figure:nth-child(3){
+	margin-right: 0;
+}
+.columns_4 figure{
+   width:24%;
+   margin-right:1%;
+}
+.columns_4 figure:nth-child(4){
+	margin-right: 0;
+}
+.columns_5 figure{
+   width:19%;
+   margin-right:1%;
+}
+.columns_5 figure:nth-child(5){
+	margin-right: 0;
+}
+#columns figure:hover{
+	-webkit-transform: scale(1.1);
+	-transform:scale(1.1);
+	transform: scale(1.1);
+
+}
+div#columns figure {
+	box-sizing:border-box;
+	box-sizing:border-box;
+
+	display: inline-block;
+	background: #BFCCBF;
+	border: 2px solid black;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 0px 15px;
+	padding: 15px;
+	padding-bottom: 5px;
+	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+	opacity: 1;
+}
+div#columns figure img {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+div#columns figure figcaption {
+  font-size: .9rem;
+  color: #444;
+  line-height: 1.5;
+  height:60px;
+  font-weight:600;
+  text-overflow:ellipsis;
+}
+a.button{
+  padding:10px;
+  background:#FFCC00;
+  margin:10px;
+  display:block;
+  text-align:center;
+}
+a.button:hover{
+  background:#FF4500;
+  color:#FFCC00;
+}
