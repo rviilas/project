@@ -1,4 +1,5 @@
 ﻿/*background image kood pärit - http://css-tricks.com/perfect-full-page-background-image/ */
+
 #main_body{ 
   background: url(taustad/taust3.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -35,11 +36,13 @@
   -o-background-size: cover;
   background-size: cover;
 }
-menu{
-	min-height:125px;
-	min-width:600px;
+#menu{
+	min-height:30px;
+	min-width:800px;
 }
 body{
+	min-width: 1000px;
+    min-height: %;
 	font-family: 'Hammersmith One', sans-serif;
 	color:#00BFFF;
 	text-align:center;
@@ -64,7 +67,7 @@ h2{
 	font-weight:700;
 }
 #wrap{
-	max-width:900px;
+	max-width:1050px;
 	min-height:600px;
 	margin-left:auto;
 	margin-right:auto;
@@ -98,23 +101,15 @@ ul
 	margin-left:auto;
 	margin-right:auto;
 }
-a:link {
+a{
 	color:#FFCC00;
 	text-decoration:none;
-}    
-a:visited {
-	color:#d9d9d9;
-	text-decoration:none;
-}  
+}     
 a:hover {
-	color:#d9d9d9;
+	color:#ffe066;
 	text-decoration:none;
 }
 #registreeru:link{
-	color:#FFCC00;
-	text-decoration:none;
-}
-#registreeru:visited{
 	color:#FFCC00;
 	text-decoration:none;
 }
@@ -169,66 +164,6 @@ a:hover {
 	height:370px;
 	border:5px black ridge;
 	background-color:#333333;
-}
-.columns_2 figure{
-   width:49%;
-   margin-right:1%;
-}
-.columns_2 figure:nth-child(2){
-	margin-right: 0;
-}
-.columns_3 figure{
-   width:32%;
-   margin-right:1%;
-}
-.columns_3 figure:nth-child(3){
-	margin-right: 0;
-}
-.columns_4 figure{
-   width:24%;
-   margin-right:1%;
-}
-.columns_4 figure:nth-child(4){
-	margin-right: 0;
-}
-.columns_5 figure{
-   width:19%;
-   margin-right:1%;
-}
-.columns_5 figure:nth-child(5){
-	margin-right: 0;
-}
-#columns figure:hover{
-	-webkit-transform: scale(1.1);
-	-transform:scale(1.1);
-	transform: scale(1.1);
-
-}
-div#columns figure {
-	box-sizing:border-box;
-	box-sizing:border-box;
-
-	display: inline-block;
-	background: #BFCCBF;
-	border: 2px solid black;
-	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-	margin: 0 0px 15px;
-	padding: 15px;
-	padding-bottom: 5px;
-	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
-	opacity: 1;
-}
-div#columns figure img {
-	width: 100%;
-	border-bottom: 1px solid #ccc;
-}
-div#columns figure figcaption {
-  font-size: .9rem;
-  color: #444;
-  line-height: 1.5;
-  height:60px;
-  font-weight:600;
-  text-overflow:ellipsis;
 }
 a.button{
   padding:10px;
