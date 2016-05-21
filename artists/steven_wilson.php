@@ -1,0 +1,47 @@
+﻿
+<body id="steven_body">
+	
+		<h2>Steven Wilson</h2>
+		<div id="content">
+	
+		<img style="width:500px;height:750px" class="pilt" src="small/steven3.jpg" alt="Steven Wilson"  />
+		<p class="role">Progressive rock - Multi-instrumentalist</p>
+		<h3>Bio</h3>
+		<p class="bio">
+		Steven John Wilson (born 3 November 1967) is an English musician and record producer, most associated with the progressive rock genre. Currently a solo artist, he became known as the founder,
+		lead guitarist, singer and songwriter of the band Porcupine Tree, as well as being a member of several other bands. 
+		He has also worked with artists such as Opeth, King Crimson, Pendulum, Jethro Tull, XTC, Yes, Marillion, Orphaned Land and Anathema.
+		<br><br>Wilson is a self-taught producer, audio engineer, guitar and keyboard player, playing other instruments as needed, including bass guitar, autoharp, hammered dulcimer and flute. 
+		He currently lives in Hemel Hempstead, the town he grew up in, but has also spent time living in London and Tel Aviv, Israel, although he does not hold a residence in Tel Aviv anymore.
+		<br><br>His music has received wide acclaim. He has been four times nominated for the Grammy Awards, twice with Porcupine Tree, with his collaborative band Storm Corrosion and as a soloist on one occasion.
+		In 2015, he received three awards at the London Progressive Music Awards for his services to the world of progressive rock music and crowned "the king of prog rock".
+		</p>
+		<p class="comment">
+		Why he made the list:
+		<br><br>
+		I started listening to Porcupine Tree, which Steven Wilson is most known for, about 7 years ago.
+		Their music instantly clicked with me as I just loved their sound and style as I have always enjoyed progressive rock. The guitar playing was great
+		with tasteful solos and excellent rythm playing but it was mostly about how it all came together.
+		Steven writes beautiful arrangements and is a master when it comes to composition and their
+		phenomenal drummer and bassist give an excellent rythm and backbone to the songs.
+		<br><br>I was sad when Porcupine Tree was put on hiatus but luckily
+		Steven's solo albums have been just as good if not better because his music keeps evolving and going
+		into different genres. Steven Wilson also writes amazing lyrics that really resonate with me and he continually makes his music
+		interesting and satifying to listen to. Steven Wilson is one of my absolute favorite artists and has been for the past 7 years.
+		<br><br>
+		- Rain
+		</p>
+		</tr>
+		</table>
+		<h3>Songs to listen to</h3>
+		<p class="bio">Porcupine Tree - Arriving Somewhere But Not Here<br><br>
+		<iframe width="560" height="315" src="http://www.youtube.com/embed/W3lsqUqGTzM" allowfullscreen></iframe></p>
+		<p class="bio">Porcupine Tree - Anesthetize<br><br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/iBfY86cktN0" allowfullscreen></iframe></p>
+		<p class="bio">Steven Wilson - Hand Cannot Erase<br><br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/eAFNOE3CgVE" allowfullscreen></iframe></p>
+		</div>
+	</div>
+</body>
+
+</html>
