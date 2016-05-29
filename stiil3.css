@@ -1,6 +1,4 @@
-﻿/*background image kood pärit - http://css-tricks.com/perfect-full-page-background-image/ */
-
-#main_body{ 
+﻿#main_body{ 
   background: url(taustad/taust3.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -42,7 +40,6 @@
 }
 body{
 	min-width: 1000px;
-    min-height: %;
 	font-family: 'Hammersmith One', sans-serif;
 	color:#00BFFF;
 	text-align:center;
@@ -87,20 +84,22 @@ ul
 	background:#444444;
 	font-weight:800;
 }
+#tab{
+	margin-left:-15px;
+}
 #content{
 	clear:both;
 	background:#444444;
 	padding:20px;
-	padding-left:85px;
 	text-align:justify;
 	text-justify:inter-word;
 	border:5px #E6B800 ridge;
 }
-#content img{
+/*#content img{
 	border: 4px black solid;
 	margin-left:auto;
 	margin-right:auto;
-}
+}*/
 a{
 	color:#FFCC00;
 	text-decoration:none;
@@ -117,11 +116,7 @@ a:hover {
 	color:#d9d9d9;
 	text-decoration:none;
 }
-.pilt{
-	display:block ;
-	margin-left:auto ;
-	margin-right:auto ;
-}
+
 .role{
 	text-align:center;
 	color:#d9d9d9;
@@ -159,9 +154,9 @@ a:hover {
 	max-width: 1100px;
 	margin: 50px auto;
 }
-#boxy{
-	width:520px;
-	height:370px;
+.boxy{
+	width:450px;
+	height:300px;
 	border:5px black ridge;
 	background-color:#333333;
 }
@@ -176,3 +171,105 @@ a.button:hover{
   background:#FF4500;
   color:#FFCC00;
 }
+.img {
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -khtml-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+}
+.selected{
+	border-radius: 0px 0px 0px 0px;
+	-moz-border-radius: 0px 0px 0px 0px;
+	-webkit-border-radius: 0px 0px 0px 0px;
+	border: 3px solid #f5ce0c;
+}
+.form
+{
+	height:250px;
+	width:400px;
+	clear:both;
+	background:#444444;
+	padding:20px;
+	text-align:justify;
+	text-justify:inter-word;
+	border:5px #E6B800 ridge;
+    position: absolute;
+
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.form2{
+	
+	position: absolute;
+    top: 35%;
+    left: 40%;
+
+    margin: -15% 0 0 -25%;
+}
+.regform{
+		height:450px;
+	width:400px;
+	clear:both;
+	background:#444444;
+	padding:20px;
+	text-align:justify;
+	text-justify:inter-word;
+	border:5px #E6B800 ridge;
+    position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+
+.form3{
+	width: 100%;
+	position: absolute;
+    top: 25%;
+    left: 40%;
+	
+        clear: both;
+    margin: -15% 0 0 -25%;
+}
+
+input[type=submit]{
+  background: #eeff00;
+  background-image: -webkit-linear-gradient(top, #eeff00, #dbd004);
+  background-image: -moz-linear-gradient(top, #eeff00, #dbd004);
+  background-image: -ms-linear-gradient(top, #eeff00, #dbd004);
+  background-image: -o-linear-gradient(top, #eeff00, #dbd004);
+  background-image: linear-gradient(to bottom, #eeff00, #dbd004);
+  -webkit-border-radius: 11;
+  -moz-border-radius: 11;
+  border-radius: 11px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Arial;
+  color: #000000;
+  font-size: 12px;
+  padding: 5px 18px 5px 18px;
+  border: solid #030405 0px;
+  font-weight: bold;
+  text-decoration: none;
+  
+}
+input[type=submit]:hover{
+  background: #ccff00;
+  background-image: -webkit-linear-gradient(top, #ccff00, #fff200);
+  background-image: -moz-linear-gradient(top, #ccff00, #fff200);
+  background-image: -ms-linear-gradient(top, #ccff00, #fff200);
+  background-image: -o-linear-gradient(top, #ccff00, #fff200);
+  background-image: linear-gradient(to bottom, #ccff00, #fff200);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+

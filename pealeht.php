@@ -4,7 +4,10 @@
 			<h2 style="text-align:left;font-size:200%;">About</h2>
 	<div id="content">
 	
-	<div class="bio"><h3 style="color:#d9d9d9">Info</h3>
+	<?php
+			if(isset($_SESSION['UID'])){
+			echo 
+			'<div class="bio"><h3 style="color:#d9d9d9">Info</h3>
 	 <p>This website has a sampling of my favorite guitar players along with their bios and information about
 		what kind of music they make. You can also find the arists main gear including the amplifiers they like to use
         and their favorite guitars.</p>
@@ -19,7 +22,11 @@
 
 		</div>
 		<div style="clear: both" ></div>
-	</div>
+	</div>';
+			}else{
+			echo "Please log in to access this content.";
+			}
+			?>
 </body>
 
 </html>

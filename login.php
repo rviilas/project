@@ -1,105 +1,129 @@
 <?php
-define('LOGIN_TIMEOUT', 30*60); 
+include("connect.php");
+session_start();
+define('LOGIN_TIMEOUT', 10*60); 
 
-if(!isset($_GET['userId']) && !isset($_SESSION['UID'])){
+if (isset($_GET['logout'])) {
+		logout();
+		header('Location: http://enos.itcollege.ee/~rviilas/project/index.php?out');
+	}
+	
+
+if((!isset($_POST['userId'])) && (!isset($_SESSION['UID']))){
 logout();
 echo '<a href="index.php?index">Please go to the login page</a>'; die();
 }
 
-if (isset($_GET['userId'])){
-	$userId = $_GET['userId'];
+	if(isset($_POST['userId'])){
+
+		if(!preg_match('/^[a-zA-Z]+[a-zA-Z0-9._]+$/', $_POST['userId'])){
+		echo
+		'<div class="login - help">
+		<p>Your username can contain only numbers and letters! Click<a href="index.php"> here</a> to try again.</p>
+		</div>
+	    <div>';
+		exit();
+		}elseif(!preg_match('/^[a-zA-Z]+[a-zA-Z0-9._]+$/', $_POST['passwd'])){
+		 echo
+		'<div class="login - help">
+		<p>Your password can contain only numbers and letters! Click<a href="index.php"> here</a> to try again.</p>
+		</div>
+	    <div>';
+		exit();
+		}
+	}
+if (isset($_POST['userId']) && isset($_POST['passwd'])){
+	$userId = trim(htmlspecialchars($_POST['userId']));
 	$_SESSION['UID'] = $userId;
-	header('Location: frames2.php');
-}else{
-	$userId = $_SESSION['UID'];
 }
+
 function checkLogin(){
 
-	if (isset($_GET['logout'])) { //kui anti logout käsk, logime välja
-		logout();
-		header('Location: http://enos.itcollege.ee/~rviilas/index.php?out');
-	}
 	
 	if (isset($_SESSION['UID'])) {
-		if(isset($_SESSION['user_id']) && isset($_SESSION['ltime'])){
+		if(isset($_SESSION['user_nm']) && isset($_SESSION['ltime'])){
+			
 			if((time()-$_SESSION['ltime']) > LOGIN_TIMEOUT){
 			logout();
 			header('Location: index.php?exp');
+			exit();
 			}else{
 			return true;
-			}	
+			}
 		}elseif(db_auth_check($_SESSION['UID'])){;	
-			//$_SESSION['userId'] = $user;
 			$_SESSION['ltime'] = time();
-			return true;
-		
+			return true;	
 	}
 
 	}else
 	return 1;
 }
 
-function unsetSession(){
-	$user = $_SESSION['user_nm'];
-	$ip = $_SERVER['REMOTE_ADDR'];
-	$d = date("y-m-d H:i:s");
-	while (list($k, $v) = each ($_SESSION)){
-		unset($_SESSION[$k]);
-	}
-}
 function logout(){
-$link_id = db_connect();
-$usr =  $_SESSION['UID'];
+	$usr = null;
+	if(isset($_SESSION['UID'])){
+		$usr = $_SESSION['UID'];
+	}
 $dt = date("y-m-d H:i:s");
-$srv = $_SERVER['REMOTE_ADDR'];
-unsetSession();
-$sql_query = "INSERT INTO DBA.USER_LOG(USRNM,LOGIN_OK,LAST_LOGIN,LOGIN_IP) VALUES ('$usr','OUT','$dt', '$srv')" ;
-//if($link_id){echo 'live';}else{echo 'die';}
-$sql_result = sasql_query($link_id, $sql_query) or die($sql_query);
-//header('Location:http://arengrwa.test.ad4.seb.net/rwa_test/index.php');
-//exit;
+$link_id = db_connect();
+$srv = $_SERVER['REMOTE_ADDR'];		
+$sql_query = "INSERT INTO rviilas_ulog(uname,login_ok,last_login,login_p) VALUES ('$usr','OUT','$dt', '$srv')" ;
+$sql_result = mysqli_query($link_id, $sql_query) or die($sql_query);
+session_unset();
+session_destroy();
 }
 
 
 function db_auth_check($user){
 $link_id = db_connect();
 $d = date("Y-m-d H:i:s" );
-$da = date("Y-m-d H:i" );
 $ip=$_SERVER['REMOTE_ADDR'];
+$password = SHA1($_POST['passwd']);
 
+$sql_uname_query = "select count(*), max(uname) as UNAME, max(fname) FNAME, max(lname) as LNAME from rviilas_user where uname = '$user' and closed_date is null";
+$sel_result4 = mysqli_query($link_id, $sql_uname_query) or die($sql_uname_query);
+$sel_info4 = mysqli_fetch_array($sel_result4, MYSQLI_BOTH) or die($sql_uname_query);
 
-$sql_str = 'SELECT count(*), max(USR_ID) as USR_ID, max(USRNM) as USRNM, max(FRST_NM) as FRST_NM, max(LST_NM) as LST_NM, max(ROLL) as ROLL, max(CHG_DT) as CHG_DT FROM rwausr."USER" as tbl WHERE tbl.USRNM = \''.$user.'\' AND tbl.DLT = 0';
+$sql_pw_query = "select count(*), max(password) from rviilas_user where password = '$password' and uname = '$user'";
+$sel_result5 = mysqli_query($link_id, $sql_pw_query);
+$sel_info5 = mysqli_fetch_array($sel_result5, MYSQLI_NUM) or die($sql_pw_query);
 
-$sql_query = "INSERT INTO DBA.USER_LOG(USRNM,LOGIN_OK,LAST_LOGIN,LOGIN_IP) VALUES ('$user','IN','$d','$ip')" ;
-$sql_result3 = sasql_query($link_id,$sql_query) or die($sql_query);
+if($sel_info4[0]==0){
 
-$sel_result = sasql_query( $link_id, $sql_str) or die('Query failed!');
+	logout();
+	header('Location: index.php?bad');
+	exit();
+}
 
-$sel_info = sasql_fetch_array($sel_result);
+if(($sel_info4[0]>0) && ($sel_info5[0]==0)){
 
-	if ($sel_info[0]>0) {
-$_SESSION['user_id'] = trim($sel_info["USR_ID"]);
-$_SESSION['user_nm'] = trim($sel_info["USRNM"]);
-$_SESSION['first_nm'] = trim($sel_info["FRST_NM"]);
-$_SESSION['last_nm'] = trim($sel_info["LST_NM"]);
-$_SESSION['role'] = trim($sel_info["ROLL"]);
-$_SESSION['LST_LG'] = trim($sel_info["CHG_DT"]);
-$sql_str4 = 'SELECT max(LAST_LOGIN) as LAST_LOGIN  FROM DBA."USER_LOG" as tbl WHERE tbl.USRNM = \''.$user.'\' AND tbl.LAST_LOGIN < \''.$da.'\'';
-$sql_result4 = sasql_query($link_id,$sql_str4) or die($sql_str4);
-$sel_info4 = sasql_fetch_array($sql_result4);
-      if ($sel_info4[0]>0) $_SESSION['llog'] = trim($sel_info4["LAST_LOGIN"]);
+	logout();
+	header('Location: index.php?bad_pass');
+	exit();
+}
+
+	if(($sel_info4[0]>0) && ($sel_info5[0]>0)){
+		
+$_SESSION['user_nm'] = trim($sel_info4["UNAME"]);
+$_SESSION['first_nm'] = trim($sel_info4["FNAME"]);
+$_SESSION['last_nm'] = trim($sel_info4["LNAME"]);
+$srv = $_SERVER['REMOTE_ADDR'];
+$dt = date("y-m-d H:i:s");
+$sql_query = "INSERT INTO rviilas_ulog(uname,login_ok,last_login,login_p) VALUES ('$user','IN','$dt', '$srv')" ;
+$sql_result = mysqli_query($link_id, $sql_query) or die($sql_query);
 
 return true;
 }else{
 logout();
 header('Location: index.php?bad');
+exit();
 }
 return false;
 }
 
 if (checkLogin()!= true ) {
-echo 'checlogin failed';die();
 logout();
 header('Location: index.php?bad');
+exit();
 }
 ?>
