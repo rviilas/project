@@ -4,7 +4,10 @@
 		<h2>Ian Thornley's Suhr</h2>
 		<div id="content">
 	
-		<img style="width:440px;height:760x" class="pilt" src="small/suhr3.jpg" alt="Suhr Classic Pro"  />
+		<?php
+			if(isset($_SESSION['UID'])){
+			echo 
+			'<img style="width:440px;height:760x;border:5px black ridge;margin-left:30%;" class="pilt" src="small/suhr3.jpg" alt="Suhr Classic Pro"  />
 		<p class="role"> Suhr Classic Pro - S/S/H</p>
 		<p class="bio">
 		Ian Thornley is a Suhr signature artist and he almost exclusively uses Suhr gear for his sound including many of their guitars.
@@ -17,7 +20,11 @@
 
 		</p>
 		</div>
-	
+	';
+			}else{
+			echo "Please log in to access this content.";
+			}
+			?>
 </body>
 
 </html>

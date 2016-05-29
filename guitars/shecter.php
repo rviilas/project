@@ -5,7 +5,10 @@
 		<h2>Nick Johnstons Signature Shecter</h2>
 		<div id="content">
 	
-		<img style="width:740px;height:512px" class="pilt" src="small/shecter3.jpg" alt="Shecter"  />
+		<?php
+			if(isset($_SESSION['UID'])){
+			echo 
+			'<img class="boxy" style="width:740px;height:512px;margin-left:100px;" class="pilt" src="small/shecter3.jpg" alt="Shecter"  />
 		<p class="role"> Shecter - Nick Johnston Traditional - S/S/S</p>
 		<p class="bio">
 		Nick Johnston is friends with the Shecter signature artist Keith Marrow who introduced Nick to the company.
@@ -19,7 +22,11 @@
 		<br>
 
 		</p>
-		</div>
+		</div>';
+			}else{
+			echo "Please log in to access this content.";
+			}
+			?>
 
 </body>
 

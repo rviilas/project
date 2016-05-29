@@ -5,7 +5,10 @@
 		<h2>Mikael Akerfeldts Paul Reed Smith</h2>
 		<div id="content">
 	
-		<img style="width:740px;height:512px" class="pilt" src="small/prs244.jpg" alt="PRS Custom24"  />
+		<?php
+			if(isset($_SESSION['UID'])){
+			echo 
+			'<img class="boxy" style="width:740px;height:512px;margin-left:80px;" class="pilt" src="small/prs244.jpg" alt="PRS Custom24"  />
 		<p class="role"> PRS Custom 24 - H/H</p>
 		<p class="bio">
 		Mikael Akerfeldt and his band Opeth are all PRS artists and use their guitars. The PRS Custom 24 is the most iconic model
@@ -17,7 +20,11 @@
 		The bridge is nickel PRS Tremolo and the headstock has PRS Phase III Locking Tuners. The Custom24 is a dual humbucker guitar featuring the PRS 85/15 but the tone
 		knob can be used to split the coils. There is also one volume knob and a 5-way blade switch.
 		</p>
-		</div>
+		</div>';
+			}else{
+			echo "Please log in to access this content.";
+			}
+			?>
 	
 </body>
 
