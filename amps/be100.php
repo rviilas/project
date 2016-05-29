@@ -4,8 +4,11 @@
 
 		<h2>Friedman BE-100</h2>
 		<div id="content">
-	
-		<img style="width:740px;height:412px" class="pilt" src="small/be1002.jpg" alt="Friedman BE-100"  />
+	<?php
+			if(isset($_SESSION['UID'])){
+			echo 
+			'
+		<img class="boxy"  style="width:740px;height:412px;margin-left:100px;" class="pilt" src="small/be1002.jpg" alt="Friedman BE-100"  />
 		<p class="role"> Friedman BE-100 - 100 Watts</p>
 		<p class="bio">
 	
@@ -35,7 +38,12 @@
 	Weight: 43 lbs.<br>
 	
 		</p>
-		</div>
+		</div>';
+			}else{
+			echo "Please log in to access this content.";
+			}
+			?>
+
 
 </body>
 

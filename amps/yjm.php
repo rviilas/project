@@ -1,11 +1,13 @@
 ﻿
-
 <body id="mikael_body">
 
 		<h2>Marshall YJM-100</h2>
 		<div id="content">
-	
-		<img style="width:740px;height:512px" class="pilt" src="small/yjm-1002.jpg" alt="Marshall YJM-100"  />
+	<?php
+			if(isset($_SESSION['UID'])){
+			echo '
+
+		<img class="boxy" style="width:740px;height:512px;margin-left:100px;" class="pilt" src="small/yjm-1002.jpg" alt="Marshall YJM-100"  />
 		<p class="role"> Marshall YJM-100 - 100 Watts</p>
 		<p class="bio">
 		The Yngwie Malmsteen Signature YJM100 100W Tube Guitar Amp Head is a 100-watt, valve head that was developed in close conjunction with the legendary Swedish six-string shredder, Yngwie Malmsteen. The YJM offers the perfect balance of vintage tone and looks alongside modern features, which makes the amplifier the perfect players’ tool for “plug in and play” recording or live performance.
@@ -30,7 +32,11 @@ Pre-amp tubes: 4 x ECC83<br>
 Power amp tubes: 4 x EL34<br>
 	
 		</p>
-		</div>
+		</div>';
+			}else{
+			echo "Please log in to access this content.";
+			}
+			?>
 	
 </body>
 

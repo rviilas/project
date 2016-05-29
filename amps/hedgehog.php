@@ -3,8 +3,10 @@
 
 		<h2>Suhr Hedgehog 50</h2>
 		<div id="content">
-	
-		<img style="width:440px;height:760x" class="pilt" src="small/hedgehog2.jpg" alt="Suhr Hedgehog 50"  />
+	<?php
+			if(isset($_SESSION['UID'])){
+			echo'
+		<img style="width:440px;height:760x;border:5px black ridge;margin-left:250px;" class="pilt" src="small/hedgehog2.jpg" alt="Suhr Hedgehog 50"  />
 		<p class="role">Suhr Hedgehog 50 - 50 Watts</p>
 		<p class="bio">
 	
@@ -30,7 +32,11 @@ Effects Loop: Return Level, Return, Send, Loop Level (INST/LINE), HT Fuse, Mains
 Dimensions: 22 ⅝ ” (W) x 10.5” (D) x 9” (H)<br>
 Weight: 44 lbs.<br>
 		</p>
-		</div>
+		</div>';
+		}else{
+			echo "Please log in to access this content.";
+			}
+			?>
 	
 </body>
 
