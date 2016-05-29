@@ -3,7 +3,11 @@
 
 		<h2>Joe Satriani</h2>
 		<div id="content">
-		<img style="width:512px;height:288px" class="pilt" src="small/satch.jpg" alt="Joe Satriani"  />
+		<?php
+			if(isset($_SESSION['UID'])){
+			echo 
+			'
+		<img class="boxy" style="width:512px;height:288px;margin-left:200px;" class="pilt" src="artists/satch.jpg" alt="Joe Satriani"  />
 		<p class="role">Instrumental guitarist - Virtuoso</p>
 		<h3>Bio</h3>
 		<p class="bio">
@@ -30,9 +34,9 @@
 		I discovered Joe Satriani through an episode of the comedy cartoon American Dad
 		where Steve and Snot where playing an airguitar version of Always With You Always With Me.
 		That guitar sound and play just hit me and I was like "Wow, who is this guy and how have I never heard of him".
-		So I found out what track it was on the internet and listened through all of Joe's albums.
+		So I found out what track it was on the internet and listened through all of Joes albums.
 		He is just a phenomenal guitar player with amazing technique as mentioned in his bio but his
-		music isn't good because he can play fast and do cool tricks but because he is such a master of the instrument.
+		music isnt good because he can play fast and do cool tricks but because he is such a master of the instrument.
 		He is really concious of melody and phrasing, being really intelligent with how and when he puts one note after another
 		which is really showcased in Always With You Always With Me because most that song is quite slow.
 		<br><br>
@@ -54,6 +58,11 @@
 	
 		</div>
 	</div>
+	';
+			}else{
+			echo "Please log in to access this content.";
+			}
+			?>
 </body>
 
 </html>

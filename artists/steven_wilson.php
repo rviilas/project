@@ -4,7 +4,10 @@
 		<h2>Steven Wilson</h2>
 		<div id="content">
 	
-		<img style="width:500px;height:750px" class="pilt" src="small/steven3.jpg" alt="Steven Wilson"  />
+		<?php
+			if(isset($_SESSION['UID'])){
+			echo 
+			'<img class="boxy" style="width:500px;height:750px;margin-left:215px;" class="pilt" src="artists/steven3.jpg" alt="Steven Wilson"  />
 		<p class="role">Progressive rock - Multi-instrumentalist</p>
 		<h3>Bio</h3>
 		<p class="bio">
@@ -25,7 +28,7 @@
 		Steven writes beautiful arrangements and is a master when it comes to composition and their
 		phenomenal drummer and bassist give an excellent rythm and backbone to the songs.
 		<br><br>I was sad when Porcupine Tree was put on hiatus but luckily
-		Steven's solo albums have been just as good if not better because his music keeps evolving and going
+		Stevens solo albums have been just as good if not better because his music keeps evolving and going
 		into different genres. Steven Wilson also writes amazing lyrics that really resonate with me and he continually makes his music
 		interesting and satifying to listen to. Steven Wilson is one of my absolute favorite artists and has been for the past 7 years.
 		<br><br>
@@ -41,7 +44,13 @@
 		<p class="bio">Steven Wilson - Hand Cannot Erase<br><br>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/eAFNOE3CgVE" allowfullscreen></iframe></p>
 		</div>
-	</div>
+	</div>';
+			}else{
+			echo "Please log in to access this content.";
+			}
+			?>
+	
+	
 </body>
 
 </html>

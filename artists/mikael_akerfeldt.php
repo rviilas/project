@@ -3,8 +3,11 @@
 
 		<h2>Mikael Akerfeldt</h2>
 		<div id="content">
-	
-		<img style="width:768px;height:432px" class="pilt" src="small/opeth3.jpg" alt="Mikael Akerfeldt"  />
+	<?php
+			if(isset($_SESSION['UID'])){
+			echo 
+			'
+		<img class="boxy" style="width:768px;height:432px;margin-left:100px;" class="pilt" src="artists/opeth3.jpg" alt="Mikael Akerfeldt"  />
 		<p class="role">Vocalist - Guitarist</p>
 		<h3>Bio</h3>
 		<p class="bio">
@@ -42,6 +45,11 @@
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/3m-ej--Z8Os" allowfullscreen></iframe></p>
 		</div>
 	</div>
+	';
+			}else{
+			echo "Please log in to access this content.";
+			}
+			?>
 </body>
 
 </html>

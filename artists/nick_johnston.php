@@ -4,7 +4,10 @@
 		<h2>Nick Johnston</h2>
 		<div id="content">
 	
-		<img style="width:424px;height:640px" class="pilt" src="small/nick3.jpg" alt="Nick Johnston"  />
+		<?php
+			if(isset($_SESSION['UID'])){
+			echo 
+			'<img class="boxy" style="width:424px;height:640px;margin-left:250px;" class="pilt" src="artists/nick3.jpg" alt="Nick Johnston"  />
 		<p class="role">Instrumental guitarist - Virtuoso</p>
 		<h3>Bio</h3>
 		<p class="bio">
@@ -20,8 +23,8 @@
 		<p class="comment">
 		Why he made the list:
 		<br><br>
-		I discovered Nick from seeing a YouTube video of an interview he did for Anderton's guitar store just a few months ago.
-		He has a great vintage sounding tone and his play is second to none. Like Satriani though it's not his
+		I discovered Nick from seeing a YouTube video of an interview he did for Andertons guitar store just a few months ago.
+		He has a great vintage sounding tone and his play is second to none. Like Satriani though its not his
 		fast play that makes him great to listen to but the mood and melody he creates with this playing. He is an exceptional
 		player who will definitely garner fame in the years to come.
 		<br><br>
@@ -37,7 +40,11 @@
 		<p class="bio">Sandmonster<br><br>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/h2RBJwHyiQk" allowfullscreen></iframe></p>
 		</div>
-	</div>
+	</div>';
+			}else{
+			echo "Please log in to access this content.";
+			}
+			?>
 </body>
 
 </html>
