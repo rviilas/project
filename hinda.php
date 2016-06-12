@@ -16,8 +16,9 @@ if(isset($_GET['check']) ){
 $sql_query = "INSERT INTO rviilas_hinded(id,uname,grade,time) VALUES (null,'$usr','$hinne', '$d')" ;
 $sql_result = mysqli_query($link_id, $sql_query) or die($sql_query);
 
-		echo'<table id="tab">
+		echo'
 		<h3>Tänan hindamast!</h3>
+		<a href="index2.php">Tagasi</a>
 		</table>';
 		exit();
 
