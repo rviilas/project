@@ -1,14 +1,12 @@
 <?php
 include("connect.php");
 session_start();
-define('LOGIN_TIMEOUT', 10*60); 
-
+define('LOGIN_TIMEOUT', 90*60); 
 if (isset($_GET['logout'])) {
 		logout();
 		header('Location: http://enos.itcollege.ee/~rviilas/project/index.php?out');
 	}
 	
-
 if((!isset($_POST['userId'])) && (!isset($_SESSION['UID']))){
 logout();
 echo '<a href="index.php?index">Please go to the login page</a>'; die();
@@ -48,6 +46,9 @@ function checkLogin(){
 			header('Location: index.php?exp');
 			exit();
 			}else{
+			
+			$_SESSION['user_nm']=$_SESSION['UID'];
+		
 			return true;
 			}
 		}elseif(db_auth_check($_SESSION['UID'])){;	

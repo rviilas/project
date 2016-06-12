@@ -26,9 +26,10 @@
 		<h1>Guitar Emporium</h1>
 		
 		<ul id="menu">
-			<li  style="float:left;"><a style="padding:75px;" href="?mode=home">Home </a></li>
-			<li  style="float:left;"><a style="padding:75px;" href="?mode=artists">Artists </a></li>
-			<li  style="float:left;"><a style="padding:75px;" href="?mode=guitars">Guitars</a></li>
-			<li  style="float:left;"><a style="padding:75px;" href="?mode=amps">Amps</a></li>
+			<li  style="float:left;"><a style="padding:50px;" href="?mode=home">Home </a></li>
+			<li  style="float:left;"><a style="padding:50px;" href="?mode=artists">Artists </a></li>
+			<li  style="float:left;"><a style="padding:50px;" href="?mode=guitars">Guitars</a></li>
+			<li  style="float:left;"><a style="padding:50px;" href="?mode=amps">Amps</a></li>
+			<li  style="float:left;"><a style="padding:50px;" href="?mode=hinda">Hinda</a></li>
 		</ul>
 		<div>

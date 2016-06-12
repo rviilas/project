@@ -16,6 +16,9 @@ function display_amps(){
 	
 	include_once("amps.php");
 }
+function display_hinda(){
+	include_once("hinda.php");
+}
 function display_home(){
 	include_once("pealeht.php");
 }

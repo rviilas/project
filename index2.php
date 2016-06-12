@@ -23,6 +23,9 @@ if (isset($_GET['mode']) && $_GET['mode']!=""){
 		case "amps":
 		include_once("amps.php");
 	break;
+		case "hinda":
+		include_once("hinda.php");
+	break;
 	case "satch":
 		display_satch();
 	break;
