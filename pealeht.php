@@ -6,6 +6,7 @@
 	
 	<?php
 			if(isset($_SESSION['UID'])){
+			
 			echo 
 			'<div class="bio"><h3 style="color:#d9d9d9">Info</h3>
 	 <p>This website has a sampling of my favorite guitar players along with their bios and information about

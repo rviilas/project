@@ -7,9 +7,20 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
 </head>
-	
+	<?php
+
+	?>
 		<div id="wrap">
 			<?php		
+				$link_id = db_connect();
+	
+$sql_query = "select avg(grade) from rviilas_hinded" ;
+$sql_result = mysqli_query($link_id, $sql_query) or die($sql_query);
+$sel_info = mysqli_fetch_array($sql_result, MYSQLI_NUM) or die($sql_query);
+echo '<h3>Lehele antud keskmine hinne on ';
+echo $sel_info[0];
+echo '<h3>';
+			
 		echo '<div style="float:right;margin-top:100px;">
 				<form action="http://enos.itcollege.ee/~rviilas/project/index2.php?" method="get">
 				<input type="hidden" name="logout">
